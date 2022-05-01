@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetGraphQLJobs", "DotnetGraphQLJobs\DotnetGraphQLJobs.csproj", "{269AFD15-7B89-4108-A45C-A2ED49BB6463}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IaC", "IaC\IaC.csproj", "{B989622D-2390-451E-9D14-CBB1A5D924DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{269AFD15-7B89-4108-A45C-A2ED49BB6463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{269AFD15-7B89-4108-A45C-A2ED49BB6463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{269AFD15-7B89-4108-A45C-A2ED49BB6463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B989622D-2390-451E-9D14-CBB1A5D924DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B989622D-2390-451E-9D14-CBB1A5D924DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B989622D-2390-451E-9D14-CBB1A5D924DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B989622D-2390-451E-9D14-CBB1A5D924DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
