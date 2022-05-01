@@ -23,11 +23,11 @@ namespace IaC
                         Github = new AppSpecServiceGithubArgs
                         {
                             DeployOnPush = true,
-                            Branch = "master",
-                            Repo = "gigabolt.io/job-search-api",
+                            Branch = "deployment",
+                            Repo = "gigabolt-io/dotnet-graphql",
                         },
-                        RunCommand = "dotnet run",
-                        HttpPort = 80,
+                        SourceDir = "/DotnetGraphQLJobs",
+                        HttpPort = 5052,
                         Routes = new InputList<AppSpecServiceRouteArgs>
                         {
                             new AppSpecServiceRouteArgs
