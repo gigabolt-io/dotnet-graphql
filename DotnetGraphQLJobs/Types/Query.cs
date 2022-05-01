@@ -12,10 +12,10 @@ public class Query
         return job;
     }
 
-    public async Task<IEnumerable<Job>?> GetJobs()
+    public async Task<IEnumerable<Job>?> GetJobs(string? keywords = null)
     {
         var jobApi = new JobsApi();
-        var jobs = await jobApi.GetJobs();
+        var jobs = await jobApi.GetJobs(keywords);
         return jobs.Results;
     }
         
