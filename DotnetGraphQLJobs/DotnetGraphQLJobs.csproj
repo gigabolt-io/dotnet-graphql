@@ -13,7 +13,6 @@
 
     <ItemGroup>
       <Folder Include="GraphQL\Mutations" />
-      <Folder Include="GraphQL\Queries" />
     </ItemGroup>
 
 </Project>

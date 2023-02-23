@@ -1,8 +1,10 @@
 using DotnetGraphQLJobs.Application.Interfaces;
+using DotnetGraphQLJobs.GraphQL.Types;
 
-namespace DotnetGraphQLJobs.GraphQL.Types;
+namespace DotnetGraphQLJobs.GraphQL.Queries;
 
-public class Query
+[ExtendObjectType(typeof(Job))]
+public class JobQueries
 {
     // public async Task<Job?> GetJob(int id)
     // {

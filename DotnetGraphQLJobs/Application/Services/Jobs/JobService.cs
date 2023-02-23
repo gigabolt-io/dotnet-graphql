@@ -1,20 +1,22 @@
 using DotnetGraphQLJobs.Application.Interfaces;
-using DotnetGraphQLJobs.Domain;
+using DotnetGraphQLJobs.Domain.Job;
 
 namespace DotnetGraphQLJobs.Application.Services.Jobs;
 
 public class JobService : IJobService
 {
-    private readonly IJobRepository _jobs;
+    
+    private readonly IJobRepositoryFactory _jobRepositoryFactory;
 
-    public JobService(IJobRepository jobs)
+    public JobService(IJobRepositoryFactory jobRepositoryFactory)
     {
-        _jobs = jobs;
+        _jobRepositoryFactory = jobRepositoryFactory;
     }
 
     public async Task<IEnumerable<Job>> GetJobs(string? keyword = null, int? skip = null, int? take = null)
     {
-        var jobs = await _jobs.GetByKeyword(keyword);
+        var repo = _jobRepositoryFactory.Create(Constants.Reed);
+        var jobs = await repo.GetByKeyword(keyword);
         if (skip != null)
         {
             jobs = jobs.Skip(skip.Value);

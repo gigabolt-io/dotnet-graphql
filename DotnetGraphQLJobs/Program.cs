@@ -3,6 +3,7 @@ using System.Text;
 using DotnetGraphQLJobs.Application.Interfaces;
 using DotnetGraphQLJobs.Application.Services.Jobs;
 using DotnetGraphQLJobs.Domain;
+using DotnetGraphQLJobs.Domain.Job;
 using DotnetGraphQLJobs.External.Reed;
 using DotnetGraphQLJobs.GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
@@ -11,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddGraphQLServer()
-    .AddQueryType<Query>();
+    .AddQueryType();
 
 builder.Services.AddHttpClient("ReedAPIClient", client =>
 {
@@ -22,8 +23,10 @@ builder.Services.AddHttpClient("ReedAPIClient", client =>
 });
 
 builder.Services
-    .AddScoped<IJobService,JobService>()
-    .AddSingleton<IJobRepository, ReedApi>();
+    .AddScoped<IJobService, JobService>()
+    .AddScoped<IJobRepository, ReedApi>()
+    .AddTransient<IJobRepositoryFactory, JobRepositoryFactory>();
+    
 
 var app = builder.Build();
 

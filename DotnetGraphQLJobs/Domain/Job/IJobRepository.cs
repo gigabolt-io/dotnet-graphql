@@ -1,6 +1,6 @@
-namespace DotnetGraphQLJobs.Domain;
+namespace DotnetGraphQLJobs.Domain.Job;
 
 public interface IJobRepository
 {
-    Task<IEnumerable<Job>> GetByKeyword(string? keyword = null);
+    Task<IEnumerable<Domain.Job.Job>> GetByKeyword(string? keyword = null);
 }

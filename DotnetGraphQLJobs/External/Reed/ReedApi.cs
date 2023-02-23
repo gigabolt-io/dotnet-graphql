@@ -1,7 +1,8 @@
 using DotnetGraphQLJobs.Domain;
+using DotnetGraphQLJobs.Domain.Job;
 using DotnetGraphQLJobs.External.Reed.DTO;
 using Newtonsoft.Json;
-using Job = DotnetGraphQLJobs.Domain.Job;
+using Job = DotnetGraphQLJobs.Domain.Job.Job;
 
 namespace DotnetGraphQLJobs.External.Reed;
 

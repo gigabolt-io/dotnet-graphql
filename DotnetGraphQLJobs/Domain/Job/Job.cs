@@ -1,4 +1,4 @@
-namespace DotnetGraphQLJobs.Domain;
+namespace DotnetGraphQLJobs.Domain.Job;
 
 public class Job
 {

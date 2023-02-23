@@ -1,4 +1,4 @@
-using DotnetGraphQLJobs.Domain;
+using DotnetGraphQLJobs.Domain.Job;
 
 namespace DotnetGraphQLJobs.Application.Interfaces;
 
