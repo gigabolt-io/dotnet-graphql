@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Pulumi" Version="3.*" />
     <PackageReference Include="Pulumi.DigitalOcean" Version="4.12.0" />
+    <PackageReference Include="Pulumi.Docker" Version="3.2.0" />
   </ItemGroup>
 
 </Project>

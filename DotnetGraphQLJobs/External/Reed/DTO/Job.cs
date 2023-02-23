@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace DotnetGraphQLJobs.Models;
+namespace DotnetGraphQLJobs.External.Reed.DTO;
 
 public class Job
 {
@@ -25,7 +25,8 @@ public class Job
     public int? Applications { get; set; }
 }
 
-public class ApiResult
+
+public class ReedApiResult
 {
     [JsonProperty("results")]
     public Job[]? Results { get; set; }
